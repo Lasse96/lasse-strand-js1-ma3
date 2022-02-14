@@ -4,8 +4,8 @@ const cors = "https://noroffcors.herokuapp.com/" + url;
 
 listGames = (list) => {
     console.log(list);
+    list.splice(8, 20);
     out.innerHTML = "";
-    if (list <8) {
     for (let item of list) {
         let newdiv = `<div>
         <h2>${item.name}</h2>
@@ -13,7 +13,7 @@ listGames = (list) => {
         <p>${item.tags.length}</p>
         </div>`;
         out.innerHTML += newdiv;
-    }}
+    }
 };
 
 fetch(cors)
